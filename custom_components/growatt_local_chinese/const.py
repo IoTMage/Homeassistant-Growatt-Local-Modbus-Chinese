@@ -38,6 +38,6 @@ DEFAULT_PLANT_ID = "0"
 
 DEFAULT_NAME = "Growatt Modbus"
 
-DOMAIN = "growatt_local"
+DOMAIN = "growatt_local_chinese"
 
 PLATFORMS = [Platform.SENSOR, Platform.SWITCH]

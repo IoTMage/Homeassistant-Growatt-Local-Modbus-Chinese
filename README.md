@@ -1,3 +1,5 @@
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
+
 # Home Assistant Growatt Local Integration (中文支持版)
 
 这是 [WouterTuinstra/Homeassistant-Growatt-Local-Modbus](https://github.com/WouterTuinstra/Homeassistant-Growatt-Local-Modbus) 的修改版本，添加了完整的中文支持。
@@ -62,7 +64,7 @@ Growatt Local 是一个 Home Assistant 的自定义组件，它使用 Modbus 协
    - 在 URL 字段中输入：`https://github.com/IoTMage/Homeassistant-Growatt-Local-Modbus-Chinese`
    - 类别选择"集成"
    - 点击"添加"
-3. 在 HACS 中搜索 "Growatt Local Modbus"
+3. 在 HACS 中搜索 "Growatt Local Modbus Chinese"
 4. 点击"下载"
 5. 重启 Home Assistant
 
@@ -85,11 +87,11 @@ Growatt Local 是一个 Home Assistant 的自定义组件，它使用 Modbus 协
 git clone https://github.com/IoTMage/Homeassistant-Growatt-Local-Modbus-Chinese.git
 ```
 
-2. 在配置目录中创建到 `growatt_local` 的符号链接
+2. 在配置目录中创建到 `growatt_local_chinese` 的符号链接
    如果您的配置目录不是标准目录，请使用它
 
 ```shell
-ln -s /share/custom_components/Homeassistant-Growatt-Local-Modbus-Chinese/custom_components/growatt_local /config/custom_components/growatt_local
+ln -s /share/custom_components/Homeassistant-Growatt-Local-Modbus-Chinese/custom_components/growatt_local_chinese /config/custom_components/growatt_local_chinese
 ```
 
 ## 配置说明

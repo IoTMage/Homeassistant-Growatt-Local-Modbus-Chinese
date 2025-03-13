@@ -1,6 +1,6 @@
 {
     "state": {
-        "growatt_local__status": {
+        "growatt_local_chinese__status": {
           "Offline": "Offline",
           "not_connected": "Geen Verbinding",
           "no_response": "Geen Reactie",

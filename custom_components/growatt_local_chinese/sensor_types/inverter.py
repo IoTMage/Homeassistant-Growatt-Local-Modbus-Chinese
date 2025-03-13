@@ -481,6 +481,6 @@ INVERTER_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
     GrowattSensorEntityDescription(
         key="status",
         name="状态",
-        device_class=f"growatt_local__status"
+        device_class=f"growatt_local_chinese__status"
     ),
 )
