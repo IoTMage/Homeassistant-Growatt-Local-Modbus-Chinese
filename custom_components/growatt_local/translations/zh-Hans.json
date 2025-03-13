@@ -1,0 +1,101 @@
+{
+  "title": "Growatt 本地连接",
+  "config": {
+    "abort": {
+      "already_configured": "设备已经配置过了"
+    },
+    "error": {
+      "serial_port": "无法连接到串行端口",
+      "network_custom": "查看日志获取详细错误信息",
+      "network_connection": "无法建立连接",
+      "device_disconnect": "设备关闭了连接",
+      "device_timeout": "设备没有响应",
+      "device_address": "设备地址可能不正确",
+      "device_type": "不支持该设备类型"
+    },
+    "step": {
+      "user": {
+        "title": "选择您的通信方式",
+        "data": {
+          "communication_layer": "通信方式"
+        }
+      },
+      "serial": {
+        "title": "定义串行端口参数",
+        "data": {
+          "port": "串行端口",
+          "baudrate": "波特率",
+          "stopbits": "停止位",
+          "parity": "校验位",
+          "bytesize": "字节大小",
+          "address": "Modbus 设备地址"
+        },
+        "data_description": {
+          "address": "默认配置的 Modbus 地址通常是：1\n或者检查设备配置中分配的 modbus 地址"
+        }
+      },
+      "network": {
+        "title": "定义网络参数",
+        "data": {
+          "ip_address": "IP 地址",
+          "port": "端口",
+          "address": "Modbus 设备地址",
+          "modbus_frame": "Modbus 帧类型"
+        },
+        "data_description": {
+          "address": "默认配置的 Modbus 地址通常是：1\n或者检查设备配置中分配的 modbus 地址",
+          "modbus_frame": "接口方法决定使用哪种帧类型。\n 直接接口时应使用默认的 'Modbus TCP'。"
+        }
+      },
+      "device": {
+        "title": "定义您的 Growatt 设备",
+        "description": "基于配置，以下值已预设。\n另外检测到以下设备类型：{device_type}",
+        "data": {
+          "name": "设备名称",
+          "model": "逆变器型号名称",
+          "type": "设备类型",
+          "dc_string": "太阳能组串数量",
+          "ac_phases": "交流相数",
+          "scan_interval": "常规更新间隔",
+          "power_scan_enabled": "启用功率更新间隔",
+          "power_scan_interval": "功率更新间隔",
+          "inverter_power_control": "逆变器功率控制"
+        },
+        "data_description": {
+          "type": "选择您的设备使用的协议版本，检测到的 modbus 版本：{modbus_version}",
+          "power_scan_enabled": "允许更高频率更新设备的各种功率值。",
+          "inverter_power_control": "创建一个开关，允许手动控制逆变器何时启用。"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Growatt 设备选项",
+        "data": {
+          "name": "设备名称",
+          "model": "逆变器型号名称",
+          "type": "设备类型",
+          "dc_string": "太阳能组串数量",
+          "ac_phases": "交流相数",
+          "scan_interval": "常规更新间隔",
+          "power_scan_enabled": "启用功率更新间隔",
+          "power_scan_interval": "功率更新间隔",
+          "inverter_power_control": "逆变器功率控制"
+        },
+        "data_description": {
+          "type": "选择您的设备使用的协议版本。",
+          "power_scan_enabled": "允许更高频率更新设备的各种功率值。",
+          "inverter_power_control": "创建一个开关，允许手动控制逆变器何时启用。"
+        }
+      }
+    }
+  },
+  "issues": {
+    "entity_migration_frequency": {
+      "title": "实体迁移失败",
+      "description": "**请手动解决此问题：**\n{error}\n您有两个选择：\n1. 如果您想迁移旧实体，请删除上述提到的实体ID。\n2. 如果您不想更新实体，请删除实体ID '{entity_id}'。"
+    }
+  }
+} 

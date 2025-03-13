@@ -1,0 +1,93 @@
+{
+  "title": "Growatt Local",
+  "config": {
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+    },
+    "error": {
+      "serial_port": "Kan niet verbinden met de seriële poort",
+      "network_custom": "Controleer logboek voor details van de error",
+      "network_connection": "Kan geen verbinding maken",
+      "device_disconnect": "Apparaat heeft de verbinding gesloten",
+      "device_timeout": "Apparaat reageerd niet",
+      "device_address": "Apparaat adres is mogelijk incorrect",
+      "device_type": "Apparaat type is niet ondersteunt"
+    },
+    "step": {
+      "user": {
+        "title": "Selecteer communicatie methode",
+        "data": {
+          "communication_layer": "Communication Layer"
+        }
+      },
+      "serial": {
+        "title": "Configureer seriële port parameters.",
+        "data": {
+          "port": "Serial port",
+          "baudrate": "Baudrate",
+          "stopbits": "Stopbits",
+          "parity": "Parity",
+          "bytesize": "Bytesize",
+          "address": "Modbus Device Address"
+        },
+        "data_description": {
+          "address": "De Standaard Modbus adres normaal geconfigureerd is: 1\nHet Alternatief is om de apperaat configratie te checken voor de geconfigureerde modbus adres."
+        }
+      },
+      "network": {
+        "title": "Configureer netwerk parameters",
+        "data": {
+          "ip_address": "[%key:common::config_flow::data::ip%]",
+          "port": "[%key:common::config_flow::data::port%]",
+          "address": "Modbus Device Address",
+          "modbus_frame": "Modbus Framer"
+        },
+        "data_description": {
+          "address": "De Standaard Modbus adres normaal geconfigureerd is: 1\nHet Alternatief is om de apperaat configratie te checken voor de geconfigureerde modbus adres.",
+          "modbus_frame": "De interfacing methode bepaald welk protocol te gebruiken.\n De standaard 'Modbus TCP' dient gebruikt te worden met een directe verbinding."
+        }
+      },
+      "device": {
+        "title": "Defineer het Growatt apparaat",
+        "description": "Gebaseerd op de configratie de volgende waardes zijn bekend.\nAanvullend is het volgende apperaat type gedetecteerd: {device_type}",
+        "data": {
+          "name": "Apparaat naam",
+          "model": "inverter model naam",
+          "type": "Apparaat type",
+          "dc_string": "Aantal PV strings",
+          "ac_phases": "Aantal grid fasen",
+          "scan_interval": "General update interval",
+          "power_scan_enabled": "Enable seperate power update interval",
+          "power_scan_interval": "Power update interval",
+          "inverter_power_control": "Inverter power controle"
+        },
+        "data_description": {
+          "type": "Selecteer de protocol versie die gebruikt wordt door het apperaat de volgende modbus versie is gedetecteerd: {modbus_version}",
+          "power_scan_enabled": "Optie om een hogere update rate te hebben voor verschillende energy waardes.",
+          "inverter_power_control": "Voegt een schakelaar toe welke manueele controle geeft wanneer de inverter aanstaat."
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Growatt apperaat opties",
+        "data": {
+          "name": "Apparaat naam",
+          "model": "inverter model naam",
+          "type": "Apparaat type",
+          "dc_string": "Aantal PV strings",
+          "ac_phases": "Aantal grid fasen",
+          "scan_interval": "General update interval",
+          "power_scan_enabled": "Enable seperate power update interval",
+          "power_scan_interval": "Power update interval"
+        },
+        "data_description": {
+          "type": "Selecteer de protocol versie die gebruikt wordt door het apperaat.",
+          "power_scan_enabled": "Optie om een hogere update rate te hebben voor verschillende energy waardes."
+        }
+      }
+    }
+  }
+}

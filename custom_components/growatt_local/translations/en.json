@@ -1,0 +1,101 @@
+{
+  "title": "Growatt Local",
+  "config": {
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+    },
+    "error": {
+      "serial_port": "Unable to connect to serial port",
+      "network_custom": "Check logs for detailed info about error",
+      "network_connection": "Unable to establish connection",
+      "device_disconnect": "Device closed connection",
+      "device_timeout": "Device didn't respond",
+      "device_address": "Device address is likely wrong",
+      "device_type": "Device type is not supported"
+    },
+    "step": {
+      "user": {
+        "title": "Select your communication layer",
+        "data": {
+          "communication_layer": "Communication Layer"
+        }
+      },
+      "serial": {
+        "title": "Define serial port parameters.",
+        "data": {
+          "port": "Serial port",
+          "baudrate": "Baudrate",
+          "stopbits": "Stopbits",
+          "parity": "Parity",
+          "bytesize": "Bytesize",
+          "address": "Modbus Device Address"
+        },
+        "data_description": {
+          "address": "The default Modbus address normally configured is: 1\nAlternatively check the device configration for the assigned modbus address"
+        }
+      },
+      "network": {
+        "title": "Define network parameters",
+        "data": {
+          "ip_address": "[%key:common::config_flow::data::ip%]",
+          "port": "[%key:common::config_flow::data::port%]",
+          "address": "Modbus Device Address",
+          "modbus_frame": "Modbus Framer"
+        },
+        "data_description": {
+          "address": "The default Modbus address normally configured is: 1\nAlternatively check the device configration for the assigned modbus address",
+          "modbus_frame": "The interfacing method determines which framer to use.\n Default 'Modbus TCP' should be used when interfacing directly."
+        }
+      },
+      "device": {
+        "title": "Define your Growatt device",
+        "description": "Based on the configration the following values are preset.\nAdditioanlly detected the following device type: {device_type}",
+        "data": {
+          "name": "Device name",
+          "model": "Inverter model name",
+          "type": "Device type",
+          "dc_string": "Number of Solar strings",
+          "ac_phases": "Number of AC phases",
+          "scan_interval": "General update interval",
+          "power_scan_enabled": "Enable power update interval",
+          "power_scan_interval": "Power update interval",
+          "inverter_power_control": "Inverter power control"
+        },
+        "data_description": {
+          "type": "Select the protocol version used by your device detected modbus version: {modbus_version}",
+          "power_scan_enabled": "Allows a higher update rate of the various power values of your device.",
+          "inverter_power_control": "Creates a switch to allow manual control of when the inverter is enabled."
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Growatt Device options",
+        "data": {
+          "name": "Device name",
+          "model": "Inverter model name",
+          "type": "Device type",
+          "dc_string": "Number of Solar strings",
+          "ac_phases": "Number of AC phases",
+          "scan_interval": "General update interval",
+          "power_scan_enabled": "Enable power update interval",
+          "power_scan_interval": "Power update interval",
+          "inverter_power_control": "Inverter power control"
+        },
+        "data_description": {
+          "type": "Select the protocol version used by your device.",
+          "power_scan_enabled": "Allows a higher update rate of the various power values of your device.",
+          "inverter_power_control": "Creates a switch to allow manual control of when the inverter is enabled."
+        }
+      }
+    }
+  },
+  "issues": {
+    "entity_migration_frequency": {
+      "title": "Failed to migrate entity",
+      "description": "**Please resolve the issue manually:**\n{error}\nYou have two options:\n1. Remove the entity with the above mentioned entityID if you want to migrate the old entity.\n2. Remove EntityID '{entity_id}' if don't want to update the entity."
+    }
+  }
+}

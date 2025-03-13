@@ -1,0 +1,21 @@
+{
+  "domain": "growatt_local",
+  "name": "Growatt 本地 Modbus",
+  "config_flow": true,
+  "documentation": "https://github.com/IoTMage/Homeassistant-Growatt-Local-Modbus-Chinese",
+  "issue_tracker": "https://github.com/IoTMage/Homeassistant-Growatt-Local-Modbus-Chinese/issues",
+  "dependencies": [
+    "sun"
+  ],
+  "requirements": [
+    "pymodbus>=3.8.3"
+  ],
+  "codeowners": [
+    "@IoTMage"
+  ],
+  "iot_class": "local_polling",
+  "loggers": [
+    "growattLocal"
+  ],
+  "version": "1.0.1"
+}

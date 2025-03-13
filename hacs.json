@@ -1,0 +1,6 @@
+{
+  "name": "Growatt 本地 Modbus",
+  "description": "使用 Modbus 协议直接连接到您的 Growatt 逆变器",
+  "homeassistant": "2024.4.4",
+  "hacs": "1.34.0"
+}
