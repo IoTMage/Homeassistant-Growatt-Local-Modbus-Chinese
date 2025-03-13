@@ -377,29 +377,6 @@ INVERTER_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     GrowattSensorEntityDescription(
-        key=ATTR_INPUT_POWER,
-        name="内部功率",
-        native_unit_of_measurement=UnitOfPower.WATT,
-        device_class=SensorDeviceClass.POWER,
-    ),
-    GrowattSensorEntityDescription(
-        key=ATTR_GRID_FREQUENCY,
-        name="交流频率",
-        native_unit_of_measurement=UnitOfFrequency.HERTZ,
-    ),
-    GrowattSensorEntityDescription(
-        key=ATTR_OUTPUT_POWER,
-        name="输出功率",
-        native_unit_of_measurement=UnitOfPower.WATT,
-        device_class=SensorDeviceClass.POWER,
-    ),
-    GrowattSensorEntityDescription(
-        key=ATTR_OUTPUT_REACTIVE_POWER,
-        name="无功功率",
-        native_unit_of_measurement=UnitOfPower.WATT,
-        device_class=SensorDeviceClass.POWER,
-    ),
-    GrowattSensorEntityDescription(
         key=ATTR_OUTPUT_1_VOLTAGE,
         name="Output 1 电压",
         native_unit_of_measurement=UnitOfElectricPotential.VOLT,
@@ -459,6 +436,29 @@ INVERTER_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
         native_unit_of_measurement=UnitOfTime.HOURS,
         device_class=SensorDeviceClass.DURATION,
         state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    GrowattSensorEntityDescription(
+        key=ATTR_INPUT_POWER,
+        name="内部功率",
+        native_unit_of_measurement=UnitOfPower.WATT,
+        device_class=SensorDeviceClass.POWER,
+    ),
+    GrowattSensorEntityDescription(
+        key=ATTR_GRID_FREQUENCY,
+        name="交流频率",
+        native_unit_of_measurement=UnitOfFrequency.HERTZ,
+    ),
+    GrowattSensorEntityDescription(
+        key=ATTR_OUTPUT_POWER,
+        name="输出功率",
+        native_unit_of_measurement=UnitOfPower.WATT,
+        device_class=SensorDeviceClass.POWER,
+    ),
+    GrowattSensorEntityDescription(
+        key=ATTR_OUTPUT_REACTIVE_POWER,
+        name="无功功率",
+        native_unit_of_measurement=UnitOfPower.WATT,
+        device_class=SensorDeviceClass.POWER,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_IPM_TEMPERATURE,
