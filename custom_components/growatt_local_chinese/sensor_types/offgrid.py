@@ -59,25 +59,25 @@ from ..API.device_type.base import (
 OFFGRID_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_1_VOLTAGE,
-        name="PV1电压",
+        name="PV1-输入电压",
         native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         device_class=SensorDeviceClass.VOLTAGE,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_1_AMPERAGE,
-        name="PV1降压电流",
+        name="PV1-输入电流",
         native_unit_of_measurement=UnitOfElectricCurrent.AMPERE ,
         device_class=SensorDeviceClass.CURRENT,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_1_POWER,
-        name="PV1充电功率",
+        name="PV1-输入功率",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_1_ENERGY_TODAY,
-        name="PV1今日发电量",
+        name="PV1-今日发电量",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
@@ -85,32 +85,32 @@ OFFGRID_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_1_ENERGY_TOTAL,
-        name="PV1总发电量",
+        name="PV1-总发电量",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_2_VOLTAGE,
-        name="PV2电压",
+        name="PV2-输入电压",
         native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         device_class=SensorDeviceClass.VOLTAGE,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_2_AMPERAGE,
-        name="PV2降压电流",
+        name="PV2-输入电流",
         native_unit_of_measurement=UnitOfElectricCurrent.AMPERE ,
         device_class=SensorDeviceClass.CURRENT,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_2_POWER,
-        name="PV2充电功率",
+        name="PV2-输入功率",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_2_ENERGY_TODAY,
-        name="PV2今日发电量",
+        name="PV2-今日发电量",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
@@ -118,7 +118,7 @@ OFFGRID_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
     ),
     GrowattSensorEntityDescription(
         key=ATTR_INPUT_2_ENERGY_TOTAL,
-        name="PV2总发电量",
+        name="PV2-总发电量",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
@@ -172,7 +172,7 @@ OFFGRID_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
     ),
     GrowattSensorEntityDescription(
         key=ATTR_CHARGE_POWER,
-        name="电池充电功率",
+        name="充电功率",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
     ),
@@ -199,7 +199,7 @@ OFFGRID_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
     ),
     GrowattSensorEntityDescription(
         key=ATTR_DISCHARGE_POWER,
-        name="电池放电功率",
+        name="放电功率",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
     ),
@@ -235,31 +235,31 @@ OFFGRID_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
     ),
     GrowattSensorEntityDescription(
         key=ATTR_ACTIVE_POWER,
-        name="有功功率",
+        name="输出有功功率",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_TEMPERATURE,
-        name="温度",
+        name="逆变器温度",
         native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         device_class=SensorDeviceClass.TEMPERATURE,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_DC_TEMPERATURE,
-        name="DC-DC温度",
+        name="DC温度",
         native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         device_class=SensorDeviceClass.TEMPERATURE,
     ),
     GrowattSensorEntityDescription(
         key=ATTR_SOC_PERCENTAGE,
-        name="SOC电量百分比",
+        name="电量(SOC)百分比",
         native_unit_of_measurement=PERCENTAGE,
         device_class=SensorDeviceClass.BATTERY
     ),
     GrowattSensorEntityDescription(
         key=ATTR_LOAD_PERCENTAGE,
-        name="逆变器负载",
+        name="负载百分比",
         native_unit_of_measurement=PERCENTAGE,
         device_class=SensorDeviceClass.BATTERY
     ),
@@ -289,7 +289,7 @@ OFFGRID_SENSOR_TYPES: tuple[GrowattSensorEntityDescription, ...] = (
     ),
     GrowattSensorEntityDescription(
         key=ATTR_BATTERY_POWER,
-        name="电池充放电功率(负为放电)",
+        name="电池充/放电功率",
         native_unit_of_measurement=UnitOfPower.WATT,
         device_class=SensorDeviceClass.POWER,
     ),
